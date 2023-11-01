@@ -1,5 +1,5 @@
 from csv import DictReader
-from json import dump
+from json import dump, load
 
 data = {}
 
@@ -76,22 +76,28 @@ def bar2(file):
         data[file] = result
 
 
-foo_files = ["fermenters", "distillers", "filters"]
-bar_files = ["pumps", "pipes", "ductworks", "bends", "valves"]
+FOO_FILES = ["fermenters", "distillers", "filters"]
+BAR_FILES = ["pumps", "pipes", "ductworks", "bends", "valves"]
+JSON_FILE = "equipment"
 
 
 def generate_json():
-    for f in foo_files:
+    for f in FOO_FILES:
         foo2(f)
-    for f in bar_files:
+    for f in BAR_FILES:
         bar2(f)
 
-    with open("equipment.json", "w", encoding='utf-8') as f:
+    with open(f"{JSON_FILE}.json", "w", encoding='utf-8') as f:
         dump(data, f, indent=2)
 
 
-def print_data():
-    for f in foo_files:
+def load_json():
+    with open(f"{JSON_FILE}.json", "r", encoding='utf-8') as f:
+        return load(f)
+
+
+def print_raw():
+    for f in FOO_FILES:
         foo(f)
-    for f in bar_files:
+    for f in BAR_FILES:
         bar(f)
