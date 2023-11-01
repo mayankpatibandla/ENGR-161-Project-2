@@ -20,8 +20,11 @@ from csv import DictReader
 # kinetic_energy_waste_fermenter = 9.7e4 # J/day
 # mass_sugar_leaving_system = 8.2e3 # kg/day
 
+data = {}
+
+
 def foo(file):
-    with open(f"{file}.csv", newline='') as f:
+    with open(f"{file}.csv", newline='', encoding='utf-8') as f:
         x = list(DictReader(f))
         power = x[0]
         efficiency = x[1]
@@ -35,21 +38,28 @@ def foo(file):
             print(f"    {cost[key]}", "$ per m^3 / hour of flow")
         print("\n")
 
+
 def bar(file):
-    with open(f"{file}.csv", newline='') as f:
+    with open(f"{file}.csv", newline='', encoding='utf-8') as f:
         x = list(DictReader(f))
-        efficiency = x[0]
-        cost = x[1]
+        coefficient = x[0]
+        costs = x[1:]
 
         print(f"{file.title()}:")
         for key in x[0].keys():
             print(f"  {key}:")
-            print(f"    {efficiency[key]}")
-            print(f"    {cost[key]}", "$ per m^3 / hour of flow")
+            if key.find("(m)") != -1:
+                for cost in costs:
+                    print(f"    {cost[key]}", "meters")
+                continue
+            print(f"    {coefficient[key]}")
+            for cost in costs:
+                print(f"    {cost[key]}", "$ per ...")
         print("\n")
 
+
 foo_files = ["fermenters", "distillers", "filters"]
-bar_files = ["pumps"]
+bar_files = ["pumps", "pipes", "ductworks", "bends", "valves"]
 
 for f in foo_files:
     foo(f)
