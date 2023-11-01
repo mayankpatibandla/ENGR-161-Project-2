@@ -1,68 +1,68 @@
 {
   "fermenters": {
     "Scrap": {
-      "power": 46600,
+      "power": 46600.0,
       "efficiency": 0.5,
-      "cost": 320
+      "cost": 320.0
     },
     "Average": {
-      "power": 47200,
+      "power": 47200.0,
       "efficiency": 0.75,
-      "cost": 380
+      "cost": 380.0
     },
     "Premium": {
-      "power": 47500,
+      "power": 47500.0,
       "efficiency": 0.9,
-      "cost": 460
+      "cost": 460.0
     },
     "World-class": {
-      "power": 48000,
+      "power": 48000.0,
       "efficiency": 0.95,
-      "cost": 1100
+      "cost": 1100.0
     }
   },
   "distillers": {
     "Scrap": {
-      "power": 47004,
+      "power": 47004.0,
       "efficiency": 0.81,
-      "cost": 390
+      "cost": 390.0
     },
     "Average": {
-      "power": 47812,
+      "power": 47812.0,
       "efficiency": 0.9,
-      "cost": 460
+      "cost": 460.0
     },
     "Premium": {
-      "power": 48200,
+      "power": 48200.0,
       "efficiency": 0.915,
-      "cost": 560
+      "cost": 560.0
     },
     "World-class": {
-      "power": 49500,
+      "power": 49500.0,
       "efficiency": 0.95,
-      "cost": 1370
+      "cost": 1370.0
     }
   },
   "filters": {
     "Scrap": {
-      "power": 48800,
+      "power": 48800.0,
       "efficiency": 0.5,
-      "cost": 200
+      "cost": 200.0
     },
     "Average": {
-      "power": 49536,
+      "power": 49536.0,
       "efficiency": 0.75,
-      "cost": 240
+      "cost": 240.0
     },
     "Premium": {
-      "power": 50350,
+      "power": 50350.0,
       "efficiency": 0.9,
-      "cost": 280
+      "cost": 280.0
     },
     "World-class": {
-      "power": 51000,
+      "power": 51000.0,
       "efficiency": 0.98,
-      "cost": 480
+      "cost": 480.0
     }
   },
   "pumps": {
