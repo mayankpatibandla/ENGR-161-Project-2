@@ -31,7 +31,7 @@ data = {}
 
 
 def foo(file):
-    with open(f"{file}.csv", encoding='utf-8', newline='') as f:
+    with open(f"data/{file}.csv", encoding='utf-8', newline='') as f:
         x = list(DictReader(f))
         power = x[0]
         efficiency = x[1]
@@ -47,7 +47,7 @@ def foo(file):
 
 
 def foo2(file):
-    with open(f"{file}.csv", encoding='utf-8', newline='') as f:
+    with open(f"data/{file}.csv", encoding='utf-8', newline='') as f:
         x = list(DictReader(f))
         power = x[0]
         efficiency = x[1]
@@ -65,7 +65,7 @@ def foo2(file):
 
 
 def bar(file):
-    with open(f"{file}.csv", encoding='utf-8', newline='') as f:
+    with open(f"data/{file}.csv", encoding='utf-8', newline='') as f:
         x = list(DictReader(f))
         coefficient = x[0]
         costs = x[1:]
@@ -84,7 +84,7 @@ def bar(file):
 
 
 def bar2(file):
-    with open(f"{file}.csv", encoding='utf-8', newline='') as f:
+    with open(f"data/{file}.csv", encoding='utf-8', newline='') as f:
         x = list(DictReader(f))
         coefficient = x[0]
         costs = x[1:]
