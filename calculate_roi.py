@@ -17,6 +17,8 @@ filters = []
 distillers = []
 dehydrators = []
 
+mass_CO2 = 0
+
 with open("equipment.json", encoding="utf-8") as f:
     equipment = json.load(f)
     for value in data.values():
@@ -38,9 +40,13 @@ with open("equipment.json", encoding="utf-8") as f:
         distillers.append(value["Distiller"])
         dehydrators.append(value["Dehydrator"])
 
+        mass_CO2 = value["Mass CO2"]
+
 roi = []
 for i in range(len(x_values)):
     roi.append(y_values[i] / x_values[i])
+
+print(mass_CO2)
 
 # z = []
 # for i in range(len(roi)):
@@ -58,6 +64,11 @@ max_dehydrator = dehydrators[max_index]
 # print(
 #     f"Max ratio: {max_val}, Max ROI: {max_roi}, Max Capital: {max_capital}, Max Fermenter: {max_fermenter}, Max Filter: {max_filter}, Max Distiller: {max_distiller}, Max Dehydrator: {max_dehydrator}"
 # )
+
+def print_best():
+    print(
+        f"Max ROI: {max_roi}, Input: {x_values[max_index]} kWh/day, Output: {y_values[max_index]} kWh/day, Capital: {max_capital}, Best Fermenter: {max_fermenter}, Best Filter: {max_filter}, Best Distiller: {max_distiller}, Best Dehydrator: {max_dehydrator}, Best Pump: Premium, Best Pipe: Glorious, Best Valve: Glorious, Diameter: 0.15m".replace(", ", "\n")
+    )
 
 def create_plot():
     # plt.style.use("dark_background")

@@ -8,7 +8,7 @@ from math import cbrt, pi
 import numpy as np
 
 from process_data import generate_json, load_json
-from calculate_roi import roi_to_csv, create_plot
+from calculate_roi import roi_to_csv, create_plot, print_best
 
 parser = ArgumentParser()
 parser.add_argument("--json", dest="generate_json", help="Generates a JSON file", action="store_true")
@@ -380,7 +380,8 @@ def q(vol_flow: float, file: str, recurse: bool = False):
                                 "Distiller": distiller_out["distiller_name"],
                                 "Dehydrator": dehydrator_out["dehydrator_name"],
                                 "Cost": dehydrator_out["total_cost"],
-                                "Pump Energy": fermenter_in["mass"] * g * 9 / (3.6e6)
+                                "Pump Energy": fermenter_in["mass"] * g * 9 / (3.6e6),
+                                "Mass CO2": fermenter_out["mass_co2"]
                             },
                             indent=2,
                         )
@@ -455,3 +456,6 @@ if args.calculate_roi:
 
 if args.create_plot:
     create_plot()
+
+if __name__ == "__main__":
+    print_best()

@@ -6,7 +6,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Premium",
   "Cost": 2714.61501399588,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 57.918
 },
 "x1": {
   "Q In": 1,
@@ -16,7 +17,8 @@
   "Distiller": "World-class",
   "Dehydrator": "World-class",
   "Cost": 2715.281436012362,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 57.918
 },
 "x2": {
   "Q In": 1,
@@ -26,7 +28,8 @@
   "Distiller": "Premium",
   "Dehydrator": "World-class",
   "Cost": 2684.8037316052196,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 57.918
 },
 "x3": {
   "Q In": 1,
@@ -36,7 +39,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Premium",
   "Cost": 2713.8262296385665,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 57.918
 },
 "x4": {
   "Q In": 1,
@@ -46,7 +50,8 @@
   "Distiller": "World-class",
   "Dehydrator": "World-class",
   "Cost": 2714.4932087593033,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 57.918
 },
 "x5": {
   "Q In": 1,
@@ -56,7 +61,8 @@
   "Distiller": "Premium",
   "Dehydrator": "World-class",
   "Cost": 2685.887762578044,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 57.918
 },
 "x6": {
   "Q In": 1,
@@ -66,7 +72,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Average",
   "Cost": 2713.902527666186,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 57.918
 },
 "x7": {
   "Q In": 1,
@@ -76,7 +83,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Premium",
   "Cost": 2714.0359977937287,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 57.918
 },
 "x8": {
   "Q In": 1,
@@ -86,7 +94,8 @@
   "Distiller": "World-class",
   "Dehydrator": "World-class",
   "Cost": 2714.7033484314425,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 57.918
 },
 "x9": {
   "Q In": 1,
@@ -96,7 +105,8 @@
   "Distiller": "Average",
   "Dehydrator": "World-class",
   "Cost": 2690.512267387152,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 57.918
 },
 "x10": {
   "Q In": 1,
@@ -106,7 +116,8 @@
   "Distiller": "Premium",
   "Dehydrator": "World-class",
   "Cost": 2693.9990637281726,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 57.918
 },
 "x11": {
   "Q In": 1,
@@ -116,7 +127,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Average",
   "Cost": 2721.5492580606974,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 57.918
 },
 "x12": {
   "Q In": 1,
@@ -126,7 +138,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Premium",
   "Cost": 2721.682770418341,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 57.918
 },
 "x13": {
   "Q In": 1,
@@ -136,7 +149,8 @@
   "Distiller": "World-class",
   "Dehydrator": "World-class",
   "Cost": 2722.350332206559,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 57.918
 },
 "x14": {
   "Q In": 1,
@@ -146,7 +160,8 @@
   "Distiller": "Premium",
   "Dehydrator": "World-class",
   "Cost": 2687.664608791172,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 86.877
 },
 "x15": {
   "Q In": 1,
@@ -156,7 +171,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Premium",
   "Cost": 2718.0509155709387,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 86.877
 },
 "x16": {
   "Q In": 1,
@@ -166,7 +182,8 @@
   "Distiller": "World-class",
   "Dehydrator": "World-class",
   "Cost": 2719.047617525909,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 86.877
 },
 "x17": {
   "Q In": 1,
@@ -176,7 +193,8 @@
   "Distiller": "Average",
   "Dehydrator": "World-class",
   "Cost": 2684.6992678058014,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 86.877
 },
 "x18": {
   "Q In": 1,
@@ -186,7 +204,8 @@
   "Distiller": "Premium",
   "Dehydrator": "World-class",
   "Cost": 2688.3762802522874,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 86.877
 },
 "x19": {
   "Q In": 1,
@@ -196,7 +215,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Average",
   "Cost": 2717.1302711057397,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 86.877
 },
 "x20": {
   "Q In": 1,
@@ -206,7 +226,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Premium",
   "Cost": 2717.329818276709,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 86.877
 },
 "x21": {
   "Q In": 1,
@@ -216,7 +237,8 @@
   "Distiller": "World-class",
   "Dehydrator": "World-class",
   "Cost": 2718.327554131557,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 86.877
 },
 "x22": {
   "Q In": 1,
@@ -226,7 +248,8 @@
   "Distiller": "Average",
   "Dehydrator": "World-class",
   "Cost": 2685.9160935361897,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 86.877
 },
 "x23": {
   "Q In": 1,
@@ -236,7 +259,8 @@
   "Distiller": "Premium",
   "Dehydrator": "Premium",
   "Cost": 2688.4628174280742,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 86.877
 },
 "x24": {
   "Q In": 1,
@@ -246,7 +270,8 @@
   "Distiller": "Premium",
   "Dehydrator": "World-class",
   "Cost": 2689.4876676581816,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 86.877
 },
 "x25": {
   "Q In": 1,
@@ -256,7 +281,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Average",
   "Cost": 2717.389842231858,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 86.877
 },
 "x26": {
   "Q In": 1,
@@ -266,7 +292,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Premium",
   "Cost": 2717.589528450584,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 86.877
 },
 "x27": {
   "Q In": 1,
@@ -276,7 +303,8 @@
   "Distiller": "World-class",
   "Dehydrator": "World-class",
   "Cost": 2718.5879595442157,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 86.877
 },
 "x28": {
   "Q In": 1,
@@ -286,7 +314,8 @@
   "Distiller": "Average",
   "Dehydrator": "Premium",
   "Cost": 2693.1047269620603,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 86.877
 },
 "x29": {
   "Q In": 1,
@@ -296,7 +325,8 @@
   "Distiller": "Average",
   "Dehydrator": "World-class",
   "Cost": 2694.142421281661,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 86.877
 },
 "x30": {
   "Q In": 1,
@@ -306,7 +336,8 @@
   "Distiller": "Premium",
   "Dehydrator": "Premium",
   "Cost": 2696.6325692370647,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 86.877
 },
 "x31": {
   "Q In": 1,
@@ -316,7 +347,8 @@
   "Distiller": "Premium",
   "Dehydrator": "World-class",
   "Cost": 2697.6581033370594,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 86.877
 },
 "x32": {
   "Q In": 1,
@@ -326,7 +358,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Average",
   "Cost": 2725.108834764158,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 86.877
 },
 "x33": {
   "Q In": 1,
@@ -336,7 +369,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Premium",
   "Cost": 2725.3086004223596,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 86.877
 },
 "x34": {
   "Q In": 1,
@@ -346,7 +380,8 @@
   "Distiller": "World-class",
   "Dehydrator": "World-class",
   "Cost": 2726.30742871337,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 86.877
 },
 "x36": {
   "Q In": 1,
@@ -356,7 +391,8 @@
   "Distiller": "Premium",
   "Dehydrator": "World-class",
   "Cost": 2691.6633717851128,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 104.2524
 },
 "x37": {
   "Q In": 1,
@@ -366,7 +402,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Average",
   "Cost": 2721.7921769826203,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 104.2524
 },
 "x38": {
   "Q In": 1,
@@ -376,7 +413,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Premium",
   "Cost": 2722.0313106315675,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 104.2524
 },
 "x39": {
   "Q In": 1,
@@ -386,7 +424,8 @@
   "Distiller": "World-class",
   "Dehydrator": "World-class",
   "Cost": 2723.226978876304,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 104.2524
 },
 "x41": {
   "Q In": 1,
@@ -396,7 +435,8 @@
   "Distiller": "Average",
   "Dehydrator": "World-class",
   "Cost": 2688.7052311386196,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 104.2524
 },
 "x42": {
   "Q In": 1,
@@ -406,7 +446,8 @@
   "Distiller": "Premium",
   "Dehydrator": "Premium",
   "Cost": 2691.1732438317217,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 104.2524
 },
 "x43": {
   "Q In": 1,
@@ -416,7 +457,8 @@
   "Distiller": "Premium",
   "Dehydrator": "World-class",
   "Cost": 2692.402671717994,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 104.2524
 },
 "x45": {
   "Q In": 1,
@@ -426,7 +468,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Average",
   "Cost": 2721.124006507144,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 104.2524
 },
 "x46": {
   "Q In": 1,
@@ -436,7 +479,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Premium",
   "Cost": 2721.3634233459006,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 104.2524
 },
 "x47": {
   "Q In": 1,
@@ -446,7 +490,8 @@
   "Distiller": "World-class",
   "Dehydrator": "World-class",
   "Cost": 2722.5605075396825,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 104.2524
 },
 "x52": {
   "Q In": 1,
@@ -456,7 +501,8 @@
   "Distiller": "Scrap",
   "Dehydrator": "World-class",
   "Cost": 2687.6475389756947,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 104.2524
 },
 "x53": {
   "Q In": 1,
@@ -466,7 +512,8 @@
   "Distiller": "Average",
   "Dehydrator": "Premium",
   "Cost": 2688.695480112871,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 104.2524
 },
 "x54": {
   "Q In": 1,
@@ -476,7 +523,8 @@
   "Distiller": "Average",
   "Dehydrator": "World-class",
   "Cost": 2689.94158644625,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 104.2524
 },
 "x58": {
   "Q In": 1,
@@ -486,7 +534,8 @@
   "Distiller": "Premium",
   "Dehydrator": "Premium",
   "Cost": 2692.3046102266608,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 104.2524
 },
 "x59": {
   "Q In": 1,
@@ -496,7 +545,8 @@
   "Distiller": "Premium",
   "Dehydrator": "World-class",
   "Cost": 2693.535689435724,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 104.2524
 },
 "x64": {
   "Q In": 1,
@@ -506,7 +556,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Average",
   "Cost": 2721.4231106477746,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 104.2524
 },
 "x65": {
   "Q In": 1,
@@ -516,7 +567,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Premium",
   "Cost": 2721.6627189481683,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 104.2524
 },
 "x66": {
   "Q In": 1,
@@ -526,7 +578,8 @@
   "Distiller": "World-class",
   "Dehydrator": "World-class",
   "Cost": 2722.860760450136,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 104.2524
 },
 "x73": {
   "Q In": 1,
@@ -536,7 +589,8 @@
   "Distiller": "Scrap",
   "Dehydrator": "World-class",
   "Cost": 2695.959625004605,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 104.2524
 },
 "x74": {
   "Q In": 1,
@@ -546,7 +600,8 @@
   "Distiller": "Average",
   "Dehydrator": "Premium",
   "Cost": 2696.965770986085,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 104.2524
 },
 "x75": {
   "Q In": 1,
@@ -556,7 +611,8 @@
   "Distiller": "Average",
   "Dehydrator": "World-class",
   "Cost": 2698.213000524268,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 104.2524
 },
 "x81": {
   "Q In": 1,
@@ -566,7 +622,8 @@
   "Distiller": "Premium",
   "Dehydrator": "Premium",
   "Cost": 2700.5204183141805,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 104.2524
 },
 "x82": {
   "Q In": 1,
@@ -576,7 +633,8 @@
   "Distiller": "Premium",
   "Dehydrator": "World-class",
   "Cost": 2701.752445095228,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 104.2524
 },
 "x89": {
   "Q In": 1,
@@ -586,7 +644,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Average",
   "Cost": 2729.1989317942407,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 104.2524
 },
 "x90": {
   "Q In": 1,
@@ -596,7 +655,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Premium",
   "Cost": 2729.4386498525782,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 104.2524
 },
 "x91": {
   "Q In": 1,
@@ -606,7 +666,8 @@
   "Distiller": "World-class",
   "Dehydrator": "World-class",
   "Cost": 2730.6372401442663,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 104.2524
 },
 "x98": {
   "Q In": 1,
@@ -616,7 +677,8 @@
   "Distiller": "Average",
   "Dehydrator": "World-class",
   "Cost": 2714.681421131831,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 110.04419999999999
 },
 "x99": {
   "Q In": 1,
@@ -626,7 +688,8 @@
   "Distiller": "Premium",
   "Dehydrator": "World-class",
   "Cost": 2718.5599247286286,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 110.04419999999999
 },
 "x100": {
   "Q In": 1,
@@ -636,7 +699,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Average",
   "Cost": 2748.6773240563775,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 110.04419999999999
 },
 "x101": {
   "Q In": 1,
@@ -646,7 +710,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Premium",
   "Cost": 2748.929752215651,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 110.04419999999999
 },
 "x102": {
   "Q In": 1,
@@ -656,7 +721,8 @@
   "Distiller": "World-class",
   "Dehydrator": "World-class",
   "Cost": 2750.191893012021,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 110.04419999999999
 },
 "x107": {
   "Q In": 1,
@@ -666,7 +732,8 @@
   "Distiller": "Average",
   "Dehydrator": "Premium",
   "Cost": 2714.290356474592,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 110.04419999999999
 },
 "x108": {
   "Q In": 1,
@@ -676,7 +743,8 @@
   "Distiller": "Average",
   "Dehydrator": "World-class",
   "Cost": 2715.604416744646,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 110.04419999999999
 },
 "x109": {
   "Q In": 1,
@@ -686,7 +754,8 @@
   "Distiller": "Premium",
   "Dehydrator": "Premium",
   "Cost": 2718.0114193266736,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 110.04419999999999
 },
 "x110": {
   "Q In": 1,
@@ -696,7 +765,8 @@
   "Distiller": "Premium",
   "Dehydrator": "World-class",
   "Cost": 2719.309733470268,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 110.04419999999999
 },
 "x114": {
   "Q In": 1,
@@ -706,7 +776,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Average",
   "Cost": 2748.0293941235614,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 110.04419999999999
 },
 "x115": {
   "Q In": 1,
@@ -716,7 +787,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Premium",
   "Cost": 2748.2821348605635,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 110.04419999999999
 },
 "x116": {
   "Q In": 1,
@@ -726,7 +798,8 @@
   "Distiller": "World-class",
   "Dehydrator": "World-class",
   "Cost": 2749.5458385455736,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 110.04419999999999
 },
 "x124": {
   "Q In": 1,
@@ -736,7 +809,8 @@
   "Distiller": "Scrap",
   "Dehydrator": "World-class",
   "Cost": 2714.56346756536,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 110.04419999999999
 },
 "x125": {
   "Q In": 1,
@@ -746,7 +820,8 @@
   "Distiller": "Average",
   "Dehydrator": "Premium",
   "Cost": 2715.5319887280207,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 110.04419999999999
 },
 "x126": {
   "Q In": 1,
@@ -756,7 +831,8 @@
   "Distiller": "Average",
   "Dehydrator": "World-class",
   "Cost": 2716.848215534633,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 110.04419999999999
 },
 "x132": {
   "Q In": 1,
@@ -766,7 +842,8 @@
   "Distiller": "Premium",
   "Dehydrator": "Premium",
   "Cost": 2719.1508581838134,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 110.04419999999999
 },
 "x133": {
   "Q In": 1,
@@ -776,7 +853,8 @@
   "Distiller": "Premium",
   "Dehydrator": "World-class",
   "Cost": 2720.451000153774,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 110.04419999999999
 },
 "x140": {
   "Q In": 1,
@@ -786,7 +864,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Average",
   "Cost": 2748.3436188782066,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 110.04419999999999
 },
 "x141": {
   "Q In": 1,
@@ -796,7 +875,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Premium",
   "Cost": 2748.596571347004,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 110.04419999999999
 },
 "x143": {
   "Q In": 1,
@@ -806,7 +886,8 @@
   "Distiller": "World-class",
   "Dehydrator": "World-class",
   "Cost": 2749.8613336909903,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 110.04419999999999
 },
 "x151": {
   "Q In": 1,
@@ -816,7 +897,8 @@
   "Distiller": "Scrap",
   "Dehydrator": "World-class",
   "Cost": 2722.89251582029,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 110.04419999999999
 },
 "x154": {
   "Q In": 1,
@@ -826,7 +908,8 @@
   "Distiller": "Average",
   "Dehydrator": "Premium",
   "Cost": 2723.8191786260604,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 110.04419999999999
 },
 "x155": {
   "Q In": 1,
@@ -836,7 +919,8 @@
   "Distiller": "Average",
   "Dehydrator": "World-class",
   "Cost": 2725.1366506851346,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 110.04419999999999
 },
 "x163": {
   "Q In": 1,
@@ -846,7 +930,8 @@
   "Distiller": "Premium",
   "Dehydrator": "Premium",
   "Cost": 2727.384059586478,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 110.04419999999999
 },
 "x164": {
   "Q In": 1,
@@ -856,7 +941,8 @@
   "Distiller": "Premium",
   "Dehydrator": "World-class",
   "Cost": 2728.6852517055404,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 110.04419999999999
 },
 "x172": {
   "Q In": 1,
@@ -866,7 +952,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Average",
   "Cost": 2756.1409848758594,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 110.04419999999999
 },
 "x173": {
   "Q In": 1,
@@ -876,7 +963,8 @@
   "Distiller": "World-class",
   "Dehydrator": "Premium",
   "Cost": 2756.394058868683,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 110.04419999999999
 },
 "x175": {
   "Q In": 1,
@@ -886,5 +974,6 @@
   "Distiller": "World-class",
   "Dehydrator": "World-class",
   "Cost": 2757.6594288328015,
-  "Pump Energy": 0.028978650749999998
+  "Pump Energy": 0.028978650749999998,
+  "Mass CO2": 110.04419999999999
 },
