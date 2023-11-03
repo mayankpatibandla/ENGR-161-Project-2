@@ -1,5 +1,6 @@
 import json
 
+import matplotlib
 from matplotlib import pyplot as plt
 
 with open("2.json", encoding="utf-8") as f:
@@ -51,8 +52,22 @@ max_fermenter = fermenters[max_index]
 max_filter = filters[max_index]
 max_distiller = distillers[max_index]
 max_dehydrator = dehydrators[max_index]
-print(f"Max ratio: {max_val}, Max ROI: {max_roi}, Max Capital: {max_capital}, Max Fermenter: {max_fermenter}, Max Filter: {max_filter}, Max Distiller: {max_distiller}, Max Dehydrator: {max_dehydrator}")
+print(
+    f"Max ratio: {max_val}, Max ROI: {max_roi}, Max Capital: {max_capital}, Max Fermenter: {max_fermenter}, Max Filter: {max_filter}, Max Distiller: {max_distiller}, Max Dehydrator: {max_dehydrator}"
+)
+
+plt.style.use("dark_background")
 
 plt.scatter(x_values, y_values)
 plt.scatter(x_values[max_index], y_values[max_index], color="red")
+
+plt.xlabel("kWh per day input")
+plt.ylabel("kWh per day output")
+plt.title("ROI")
+
+plt.ticklabel_format(style='sci', axis='both', scilimits=(0, 0))
+
+print(matplotlib.style.available)
+
+
 plt.show()
