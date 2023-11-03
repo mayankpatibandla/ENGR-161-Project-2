@@ -54,5 +54,5 @@ max_dehydrator = dehydrators[max_index]
 print(f"Max ratio: {max_val}, Max ROI: {max_roi}, Max Capital: {max_capital}, Max Fermenter: {max_fermenter}, Max Filter: {max_filter}, Max Distiller: {max_distiller}, Max Dehydrator: {max_dehydrator}")
 
 plt.scatter(x_values, y_values)
-# plt.scatter(x_values[max_index], y_values[max_index], color="red")
+plt.scatter(x_values[max_index], y_values[max_index], color="red")
 plt.show()
