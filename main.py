@@ -1,11 +1,8 @@
-import multiprocessing
 import os
 import sys
 from argparse import ArgumentParser
-from json import dump, dumps
+from json import dumps
 from math import cbrt, pi
-
-import numpy as np
 
 from process_data import generate_json, load_json
 from calculate_roi import roi_to_csv, create_plot, print_best
@@ -18,14 +15,7 @@ parser.add_argument("--roi", dest="calculate_roi", help="Calculates the roi", ac
 parser.add_argument("--plot", dest="create_plot", help="Creates a plot", action="store_true")
 args = parser.parse_args()
 
-
-if args.generate_json:
-    generate_json()
-
 data = load_json()
-
-if args.print_data:
-    print(data)
 
 g = 9.80665
 
@@ -44,9 +34,6 @@ pipe_total_length = (
 
 num_bends_section_2 = 2
 
-jobs = []
-MAX_PROCESSES = 24
-
 name = 0
 
 
@@ -61,29 +48,6 @@ def q(vol_flow: float, file: str, recurse: bool = False):
         }
         fermenter_in["mass"] = fermenter_in["initial_volumetric_flow"] * 1182
 
-        # for pump_name, pump_data in data["pumps"].items():
-        #     if pump_name.find('(m)') != -1:
-        #         continue
-
-        #     x = pump_data["cost"][2]  # type: ignore
-        # pump_energy_loss_1 = fermenter_in["mass"] * g * pipe_length_section_1 / (3.6e6 * pump_data["coefficient"]) - fermenter_in["mass"] * g * pipe_length_section_1 / (3.6e6)  # type: ignore
-
-        # bend_energy_loss_1 = (
-        #     num_bends_section_1
-        #     * fermenter_in["mass"]
-        #     * 0.3
-        #     * (fermenter_in["initial_volumetric_flow"] / 86400 / (pi * ((pipe_diameter / 2)**2))) ** 2
-        #     / (2 * g)
-        # ) / (3.6e6)
-
-        # for pipe_name, pipe_data in data["pipes"].items():
-        #     if pipe_name.find('(m)') != -1:
-        #         continue
-
-        #     for pipe_index, pipe_diameter in enumerate(data["pipes"]["Internal Diameter (m)"]):
-        #         for valve_name, valve_data in data["valves"].items():
-        #             if valve_name.find('(m)') != -1:
-        #                 continue
         pipe_diameter = 0.15
         pipe_data = {"coefficient": 0.002, "cost": 73}
         valve_data = {"coefficient": 500.0, "cost": 76}
@@ -112,7 +76,6 @@ def q(vol_flow: float, file: str, recurse: bool = False):
                 + fermenter_in["density_fiber"] * fermenter_out["mass_fiber"]
             ) / fermenter_out["total_mass"]
             fermenter_out["volumetric_flow"] = fermenter_out["total_mass"] / fermenter_out["density"]
-            # print(fermenter_out)
 
             bend_energy_loss_2 = (
                 num_bends_section_2
@@ -122,12 +85,6 @@ def q(vol_flow: float, file: str, recurse: bool = False):
                 / (2 * g)
             ) / (3.6e6)
 
-            # print(fermenter_out["total_mass"])
-            # print(pipe_data["coefficient"])
-            # print(valve_data["coefficient"])
-            # print(fermenter_out["volumetric_flow"])
-            # print(pipe_diameter)
-            # print(pipe_length_section_2)
             pipe_energy_loss_2 = (fermenter_out["total_mass"] * g * (pipe_data["coefficient"] * 8 * (fermenter_out["volumetric_flow"] / 86400) ** 2 * pipe_length_section_2 / (pi**2 * g * ((pipe_diameter / 2) * 2) ** 5))) / (3.6e6)  # type: ignore
 
             valve_energy_loss_2 = 2 * (fermenter_out["total_mass"] * g * valve_data["coefficient"] * ((fermenter_out["volumetric_flow"] / 86400) / (pi * (pipe_diameter / 2) ** 2)) ** 2 / (2 * g)) / (3.6e6)  # type: ignore
@@ -178,8 +135,6 @@ def q(vol_flow: float, file: str, recurse: bool = False):
                     + fermenter_in["density_fiber"] * filter_out["mass_fiber"]
                 ) / filter_out["total_mass"]
                 filter_out["volumetric_flow"] = filter_out["total_mass"] / filter_out["density"]
-
-                # print(filter_out)
 
                 pipe_energy_loss_3 = (filter_out["total_mass"] * g * (pipe_data["coefficient"] * 8 * (filter_out["volumetric_flow"] / 86400) ** 2 * pipe_length_section_3 / (pi**2 * g * ((pipe_diameter / 2) * 2) ** 5))) / (3.6e6)  # type: ignore
 
@@ -240,8 +195,6 @@ def q(vol_flow: float, file: str, recurse: bool = False):
                         + fermenter_in["density_fiber"] * distiller_out["mass_fiber"]
                     ) / distiller_out["total_mass"]
                     distiller_out["volumetric_flow"] = distiller_out["total_mass"] / distiller_out["density"]
-
-                    # print(distiller_out)
 
                     pipe_energy_loss_4 = (distiller_out["total_mass"] * g * (pipe_data["coefficient"] * 8 * (distiller_out["volumetric_flow"] / 86400) ** 2 * pipe_length_section_4 / (pi**2 * g * ((pipe_diameter / 2) * 2) ** 5))) / (3.6e6)  # type: ignore
 
@@ -341,7 +294,6 @@ def q(vol_flow: float, file: str, recurse: bool = False):
                         grade = dehydrator_out["mass_ethanol"] / dehydrator_out["total_mass"]
                         if float(grade) < 0.98:
                             continue
-                        # # print(type(dehydrator_out["mass_ethanol"]), type(dehydrator_out["total_mass"]), type(grade))
 
                         if not recurse:
                             if dehydrator_out["volumetric_flow"] < 378:  # type: ignore
@@ -349,27 +301,6 @@ def q(vol_flow: float, file: str, recurse: bool = False):
 
                             if dehydrator_out["volumetric_flow"] > 379:  # type: ignore
                                 continue
-
-                        # velocity = (2 * 9.81 * (7.62 - 0)) ** 0.5
-
-                        # output.append(
-                        #     {
-                        #         # "Fermenter Out": fermenter_out,
-                        #         # "Filter Out": filter_out,
-                        #         # "Distiller Out": distiller_out,
-                        #         # "Dehydrator Out": dehydrator_out,
-                        #         # "Pump Efficiency": pump_data["coefficient"],
-                        #         # "Bend Energy Loss Section 2": bend_energy_loss_2,
-                        #         # "Pipe Energy Loss Section 2": pipe_energy_loss_2,
-                        #         # "Valve Energy Loss Section 2": valve_energy_loss_2,
-                        #         # "Mass Input": fermenter_in["mass"],
-                        #         "Q": dehydrator_out["volumetric_flow"],
-                        #     }
-                        # )
-                        # print(
-                        #     dehydrator_out["volumetric_flow"],
-                        #     type(dehydrator_out["volumetric_flow"]),
-                        # )
 
                         json_str = dumps(
                             {
@@ -393,63 +324,28 @@ def q(vol_flow: float, file: str, recurse: bool = False):
                         global jobs
                         if recurse:
                             q(378.54118 / dehydrator_out["volumetric_flow"], "2.json", False)
-                            # p = multiprocessing.Process(
-                            #     target=q,
-                            #     args=(
-                            #         378.54118 / dehydrator_out["volumetric_flow"],
-                            #         "2.json",
-                            #         False,
-                            #     ),
-                            #     daemon=True,
-                            # )
-                            # jobs.append(p)
-                            # jobs = [job for job in jobs if job.is_alive()]
-                            # if len(jobs) >= MAX_PROCESSES:
-                            #     for job in jobs:
-                            #         job.join()
-                            #     jobs.clear()
-                            # else:
-                            #     p.start()
 
-                        # return dehydrator_out, grade
-                # for pump_name, pump_data in data["pumps"].items():
-                #     if pump_name.find('(m)') != -1:
-                #         continue
-                #     for pipe_name, pipe_data in data["pipes"].items():
-                #         if pipe_name.find('(m)') != -1:
-                #             continue
-                #         for ductwork_name, ductwork_data in data["ductworks"].items():
-                #             if ductwork_name.find('(m)') != -1:
-                #                 continue
-                #             for bend_angle, bend_data in data["bends"].items():
-                #                 if bend_angle.find('(m)') != -1:
-                #                     continue
-                #                 for valve_name, valve_data in data["valves"].items():
-                #                     if valve_name.find('(m)') != -1:
-                #                         continue
-
-
-def generate(start: int, stop: int, step: int):
+def delete_file(file: str):
     try:
-        os.remove("1.json")
-        os.remove("2.json")
+        os.remove(file)
     except FileNotFoundError:
         pass
 
-    input("Press enter to start")
-    # x = {"data": [q(float(float(x) / 264.17205)) for x in np.arange(start, stop, step)]}
-    # q(1, "1.json")
-    # print(output["volumetric_flow"])
-    # # print(grade)
-    # q(378.54118 / output["volumetric_flow"], "2.json")
+
+def generate():
+    delete_file("1.json")
+    delete_file("2.json")
+
     q(1, "1.json", True)
 
-    # with open("Volumetric Flow.json", "w", encoding='utf-8') as f:
-    #     dump(x, f, indent=2)
+if args.generate_json:
+    generate_json()
 
+if args.print_data:
+    print(data)
 
 if args.generate_configs:
-    generate(int(8e5), int(1.2e6), 100)
+    generate()
 
 if args.calculate_roi:
     roi_to_csv()
