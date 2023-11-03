@@ -1,0 +1,839 @@
+{
+  "x35": {
+    "Q In": 3268.8378611984726,
+    "Q Out": 378.07739849163687,
+    "Fermenter": "Average",
+    "Filter": "Average",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 318856.8409845843
+  },
+  "x40": {
+    "Q In": 2722.070641723831,
+    "Q Out": 378.2068463328156,
+    "Fermenter": "Premium",
+    "Filter": "Scrap",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 278635.5560263575
+  },
+  "x44": {
+    "Q In": 2720.8827639896663,
+    "Q Out": 378.04180209374374,
+    "Fermenter": "Premium",
+    "Filter": "Scrap",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 278515.09815460583
+  },
+  "x48": {
+    "Q In": 2725.108597824054,
+    "Q Out": 378.62894125029703,
+    "Fermenter": "Premium",
+    "Filter": "Scrap",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 278943.6228551517
+  },
+  "x49": {
+    "Q In": 2725.108597824054,
+    "Q Out": 378.4156563747626,
+    "Fermenter": "Premium",
+    "Filter": "Average",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 277144.5303273866
+  },
+  "x50": {
+    "Q In": 2725.108597824054,
+    "Q Out": 378.27297397978407,
+    "Fermenter": "Premium",
+    "Filter": "Premium",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 277965.99307558406
+  },
+  "x51": {
+    "Q In": 2725.108597824054,
+    "Q Out": 378.19174631653084,
+    "Fermenter": "Premium",
+    "Filter": "World-class",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 299084.13210717175
+  },
+  "x55": {
+    "Q In": 2723.3289251052374,
+    "Q Out": 378.38167276280615,
+    "Fermenter": "Premium",
+    "Filter": "Scrap",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 278763.1534498008
+  },
+  "x56": {
+    "Q In": 2723.3289251052374,
+    "Q Out": 378.1685271754685,
+    "Fermenter": "Premium",
+    "Filter": "Average",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 276965.2358408174
+  },
+  "x57": {
+    "Q In": 2723.3289251052374,
+    "Q Out": 378.02593796089644,
+    "Fermenter": "Premium",
+    "Filter": "Premium",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 277786.16211897146
+  },
+  "x60": {
+    "Q In": 2724.5252355404846,
+    "Q Out": 378.5478886454574,
+    "Fermenter": "Premium",
+    "Filter": "Scrap",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 278884.4664477251
+  },
+  "x61": {
+    "Q In": 2724.5252355404846,
+    "Q Out": 378.33464942746446,
+    "Fermenter": "Premium",
+    "Filter": "Average",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 277085.75904880813
+  },
+  "x62": {
+    "Q In": 2724.5252355404846,
+    "Q Out": 378.19199757626706,
+    "Fermenter": "Premium",
+    "Filter": "Premium",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 277907.04594647634
+  },
+  "x63": {
+    "Q In": 2724.5252355404846,
+    "Q Out": 378.110787301283,
+    "Fermenter": "Premium",
+    "Filter": "World-class",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 299020.66423712624
+  },
+  "x67": {
+    "Q In": 2727.1515576110683,
+    "Q Out": 378.9127909561256,
+    "Fermenter": "Premium",
+    "Filter": "Scrap",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 279150.7911362905
+  },
+  "x68": {
+    "Q In": 2727.1515576110683,
+    "Q Out": 378.12655676314006,
+    "Fermenter": "Premium",
+    "Filter": "Average",
+    "Distiller": "Premium",
+    "Dehydrator": "Premium",
+    "Cost": 195936.91094531913
+  },
+  "x69": {
+    "Q In": 2727.1515576110683,
+    "Q Out": 378.699346185919,
+    "Fermenter": "Premium",
+    "Filter": "Average",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 277350.34987074527
+  },
+  "x70": {
+    "Q In": 2727.1515576110683,
+    "Q Out": 378.2541462881137,
+    "Fermenter": "Premium",
+    "Filter": "Premium",
+    "Distiller": "Average",
+    "Dehydrator": "Premium",
+    "Cost": 189203.91392401815
+  },
+  "x71": {
+    "Q In": 2727.1515576110683,
+    "Q Out": 378.55655682530454,
+    "Fermenter": "Premium",
+    "Filter": "Premium",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 278172.42845505214
+  },
+  "x72": {
+    "Q In": 2727.1515576110683,
+    "Q Out": 378.47526826758696,
+    "Fermenter": "Premium",
+    "Filter": "World-class",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 299306.39931569283
+  },
+  "x76": {
+    "Q In": 2725.819807353924,
+    "Q Out": 378.7277570062199,
+    "Fermenter": "Premium",
+    "Filter": "Scrap",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 279015.74373424955
+  },
+  "x77": {
+    "Q In": 2725.819807353924,
+    "Q Out": 378.5144164670276,
+    "Fermenter": "Premium",
+    "Filter": "Average",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 277216.18167440273
+  },
+  "x78": {
+    "Q In": 2725.819807353924,
+    "Q Out": 378.06943397317883,
+    "Fermenter": "Premium",
+    "Filter": "Premium",
+    "Distiller": "Average",
+    "Dehydrator": "Premium",
+    "Cost": 189112.79023406547
+  },
+  "x79": {
+    "Q In": 2725.819807353924,
+    "Q Out": 378.37169683441954,
+    "Fermenter": "Premium",
+    "Filter": "Premium",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 278037.85881179816
+  },
+  "x80": {
+    "Q In": 2725.819807353924,
+    "Q Out": 378.2904479721571,
+    "Fermenter": "Premium",
+    "Filter": "World-class",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 299161.5093310645
+  },
+  "x83": {
+    "Q In": 2726.6013796135876,
+    "Q Out": 378.83634898997843,
+    "Fermenter": "Premium",
+    "Filter": "Scrap",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 279094.9998129318
+  },
+  "x84": {
+    "Q In": 2726.6013796135876,
+    "Q Out": 378.05027341221694,
+    "Fermenter": "Premium",
+    "Filter": "Average",
+    "Distiller": "Premium",
+    "Dehydrator": "Premium",
+    "Cost": 195897.90724273113
+  },
+  "x85": {
+    "Q In": 2726.6013796135876,
+    "Q Out": 378.6229472801057,
+    "Fermenter": "Premium",
+    "Filter": "Average",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 277294.9217683647
+  },
+  "x86": {
+    "Q In": 2726.6013796135876,
+    "Q Out": 378.17783719709337,
+    "Fermenter": "Premium",
+    "Filter": "Premium",
+    "Distiller": "Average",
+    "Dehydrator": "Premium",
+    "Cost": 189166.268540436
+  },
+  "x87": {
+    "Q In": 2726.6013796135876,
+    "Q Out": 378.48018672580446,
+    "Fermenter": "Premium",
+    "Filter": "Premium",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 278116.8345053165
+  },
+  "x88": {
+    "Q In": 2726.6013796135876,
+    "Q Out": 378.3989145672322,
+    "Fermenter": "Premium",
+    "Filter": "World-class",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 299246.5417852136
+  },
+  "x92": {
+    "Q In": 2728.318546267588,
+    "Q Out": 378.2883622255695,
+    "Fermenter": "Premium",
+    "Filter": "Average",
+    "Distiller": "Premium",
+    "Dehydrator": "Premium",
+    "Cost": 196019.64213177242
+  },
+  "x93": {
+    "Q In": 2728.318546267588,
+    "Q Out": 378.8613967531085,
+    "Fermenter": "Premium",
+    "Filter": "Average",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 277467.9190338964
+  },
+  "x94": {
+    "Q In": 2728.318546267588,
+    "Q Out": 378.416006348149,
+    "Fermenter": "Premium",
+    "Filter": "Premium",
+    "Distiller": "Average",
+    "Dehydrator": "Premium",
+    "Cost": 189283.7639649518
+  },
+  "x95": {
+    "Q In": 2728.318546267588,
+    "Q Out": 378.71854629110356,
+    "Fermenter": "Premium",
+    "Filter": "Premium",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 278290.34939886845
+  },
+  "x96": {
+    "Q In": 2728.318546267588,
+    "Q Out": 378.12993719603037,
+    "Fermenter": "Premium",
+    "Filter": "World-class",
+    "Distiller": "Average",
+    "Dehydrator": "Premium",
+    "Cost": 211767.57879123208
+  },
+  "x97": {
+    "Q In": 2728.318546267588,
+    "Q Out": 378.6372229489766,
+    "Fermenter": "Premium",
+    "Filter": "World-class",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 299433.36378794716
+  },
+  "x103": {
+    "Q In": 2579.787968085878,
+    "Q Out": 378.4148837303717,
+    "Fermenter": "World-class",
+    "Filter": "Scrap",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 333568.3220575829
+  },
+  "x104": {
+    "Q In": 2579.787968085878,
+    "Q Out": 378.2633156070164,
+    "Fermenter": "World-class",
+    "Filter": "Average",
+    "Distiller": "Average",
+    "Dehydrator": "Premium",
+    "Cost": 245160.13002554583
+  },
+  "x105": {
+    "Q In": 2579.787968085878,
+    "Q Out": 378.203783845895,
+    "Fermenter": "World-class",
+    "Filter": "Average",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 331917.5977469407
+  },
+  "x106": {
+    "Q In": 2579.787968085878,
+    "Q Out": 378.0624610781062,
+    "Fermenter": "World-class",
+    "Filter": "Premium",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 332734.4408489552
+  },
+  "x111": {
+    "Q In": 2578.620525798904,
+    "Q Out": 378.24363862088387,
+    "Fermenter": "World-class",
+    "Filter": "Scrap",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 333418.54820799566
+  },
+  "x112": {
+    "Q In": 2578.620525798904,
+    "Q Out": 378.09213908727276,
+    "Fermenter": "World-class",
+    "Filter": "Average",
+    "Distiller": "Average",
+    "Dehydrator": "Premium",
+    "Cost": 245050.3638487424
+  },
+  "x113": {
+    "Q In": 2578.620525798904,
+    "Q Out": 378.03263426582765,
+    "Fermenter": "World-class",
+    "Filter": "Average",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 331768.570902592
+  },
+  "x117": {
+    "Q In": 2582.69295661115,
+    "Q Out": 378.8409990809929,
+    "Fermenter": "World-class",
+    "Filter": "Scrap",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 333941.009700954
+  },
+  "x118": {
+    "Q In": 2582.69295661115,
+    "Q Out": 378.689260283316,
+    "Fermenter": "World-class",
+    "Filter": "Average",
+    "Distiller": "Average",
+    "Dehydrator": "Premium",
+    "Cost": 245433.26514131366
+  },
+  "x119": {
+    "Q In": 2582.69295661115,
+    "Q Out": 378.0494348184325,
+    "Fermenter": "World-class",
+    "Filter": "Average",
+    "Distiller": "Premium",
+    "Dehydrator": "Premium",
+    "Cost": 255012.26137695235
+  },
+  "x120": {
+    "Q In": 2582.69295661115,
+    "Q Out": 378.62966148723103,
+    "Fermenter": "World-class",
+    "Filter": "Average",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 332288.4265903696
+  },
+  "x121": {
+    "Q In": 2582.69295661115,
+    "Q Out": 378.18386564666906,
+    "Fermenter": "World-class",
+    "Filter": "Premium",
+    "Distiller": "Average",
+    "Dehydrator": "Premium",
+    "Cost": 248631.5160826949
+  },
+  "x122": {
+    "Q In": 2582.69295661115,
+    "Q Out": 378.48817958278477,
+    "Fermenter": "World-class",
+    "Filter": "Premium",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 333106.1895072963
+  },
+  "x123": {
+    "Q In": 2582.69295661115,
+    "Q Out": 378.40760052275385,
+    "Fermenter": "World-class",
+    "Filter": "World-class",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 353176.7562811544
+  },
+  "x127": {
+    "Q In": 2580.9447571037394,
+    "Q Out": 378.58456617595436,
+    "Fermenter": "World-class",
+    "Filter": "Scrap",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 333716.7291748848
+  },
+  "x128": {
+    "Q In": 2580.9447571037394,
+    "Q Out": 378.4329300887571,
+    "Fermenter": "World-class",
+    "Filter": "Average",
+    "Distiller": "Average",
+    "Dehydrator": "Premium",
+    "Cost": 245268.89455232775
+  },
+  "x129": {
+    "Q In": 2580.9447571037394,
+    "Q Out": 378.37337163379226,
+    "Fermenter": "World-class",
+    "Filter": "Average",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 332065.2646756543
+  },
+  "x130": {
+    "Q In": 2580.9447571037394,
+    "Q Out": 378.23198549654916,
+    "Fermenter": "World-class",
+    "Filter": "Premium",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 332882.47405511903
+  },
+  "x131": {
+    "Q In": 2580.9447571037394,
+    "Q Out": 378.1514609793986,
+    "Fermenter": "World-class",
+    "Filter": "World-class",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 352939.45527861564
+  },
+  "x134": {
+    "Q In": 2582.1009667880235,
+    "Q Out": 378.75416364283365,
+    "Fermenter": "World-class",
+    "Filter": "Scrap",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 333865.0619682046
+  },
+  "x135": {
+    "Q In": 2582.1009667880235,
+    "Q Out": 378.6024596258313,
+    "Fermenter": "World-class",
+    "Filter": "Average",
+    "Distiller": "Average",
+    "Dehydrator": "Premium",
+    "Cost": 245377.60460857727
+  },
+  "x136": {
+    "Q In": 2582.1009667880235,
+    "Q Out": 378.5428744903913,
+    "Fermenter": "World-class",
+    "Filter": "Average",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 332212.8576510791
+  },
+  "x137": {
+    "Q In": 2582.1009667880235,
+    "Q Out": 378.09718083225806,
+    "Fermenter": "World-class",
+    "Filter": "Premium",
+    "Distiller": "Average",
+    "Dehydrator": "Premium",
+    "Cost": 248575.12246634194
+  },
+  "x138": {
+    "Q In": 2582.1009667880235,
+    "Q Out": 378.4014250154301,
+    "Fermenter": "World-class",
+    "Filter": "Premium",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 333030.43312455766
+  },
+  "x139": {
+    "Q In": 2582.1009667880235,
+    "Q Out": 378.32086442516203,
+    "Fermenter": "World-class",
+    "Filter": "World-class",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 353096.39944662276
+  },
+  "x142": {
+    "Q In": 2577.051714225818,
+    "Q Out": 378.01351905771793,
+    "Fermenter": "World-class",
+    "Filter": "Scrap",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 333217.281771871
+  },
+  "x144": {
+    "Q In": 2584.6489508180252,
+    "Q Out": 378.97605842891375,
+    "Fermenter": "World-class",
+    "Filter": "Average",
+    "Distiller": "Average",
+    "Dehydrator": "Premium",
+    "Cost": 245617.17316702308
+  },
+  "x145": {
+    "Q In": 2584.6489508180252,
+    "Q Out": 378.33574839570156,
+    "Fermenter": "World-class",
+    "Filter": "Average",
+    "Distiller": "Premium",
+    "Dehydrator": "Premium",
+    "Cost": 255203.424014682
+  },
+  "x146": {
+    "Q In": 2584.6489508180252,
+    "Q Out": 378.91641449667685,
+    "Fermenter": "World-class",
+    "Filter": "Average",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 332538.1140034846
+  },
+  "x147": {
+    "Q In": 2584.6489508180252,
+    "Q Out": 378.4702810350425,
+    "Fermenter": "World-class",
+    "Filter": "Premium",
+    "Distiller": "Average",
+    "Dehydrator": "Premium",
+    "Cost": 248817.8462907665
+  },
+  "x148": {
+    "Q In": 2584.6489508180252,
+    "Q Out": 378.7748254419344,
+    "Fermenter": "World-class",
+    "Filter": "Premium",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 333356.4962525081
+  },
+  "x149": {
+    "Q In": 2584.6489508180252,
+    "Q Out": 378.1831942491783,
+    "Fermenter": "World-class",
+    "Filter": "World-class",
+    "Distiller": "Average",
+    "Dehydrator": "Premium",
+    "Cost": 270161.75853084796
+  },
+  "x150": {
+    "Q In": 2584.6489508180252,
+    "Q Out": 378.6941853559402,
+    "Fermenter": "World-class",
+    "Filter": "World-class",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 353442.26338405994
+  },
+  "x152": {
+    "Q In": 2578.1365158924477,
+    "Q Out": 378.1726421097447,
+    "Fermenter": "World-class",
+    "Filter": "Scrap",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 333356.4534665948
+  },
+  "x153": {
+    "Q In": 2578.1365158924477,
+    "Q Out": 378.02117101275616,
+    "Fermenter": "World-class",
+    "Filter": "Average",
+    "Distiller": "Average",
+    "Dehydrator": "Premium",
+    "Cost": 245004.85588869092
+  },
+  "x156": {
+    "Q In": 2583.3237574712502,
+    "Q Out": 378.93352747756984,
+    "Fermenter": "World-class",
+    "Filter": "Scrap",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 334021.9365907051
+  },
+  "x157": {
+    "Q In": 2583.3237574712502,
+    "Q Out": 378.78175161898594,
+    "Fermenter": "World-class",
+    "Filter": "Average",
+    "Distiller": "Average",
+    "Dehydrator": "Premium",
+    "Cost": 245492.57479589956
+  },
+  "x158": {
+    "Q In": 2583.3237574712502,
+    "Q Out": 378.14176988261806,
+    "Fermenter": "World-class",
+    "Filter": "Average",
+    "Distiller": "Premium",
+    "Dehydrator": "Premium",
+    "Cost": 255073.9106169441
+  },
+  "x159": {
+    "Q In": 2583.3237574712502,
+    "Q Out": 378.7221382666599,
+    "Fermenter": "World-class",
+    "Filter": "Average",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 332368.949852844
+  },
+  "x160": {
+    "Q In": 2583.3237574712502,
+    "Q Out": 378.2762335445573,
+    "Fermenter": "World-class",
+    "Filter": "Premium",
+    "Distiller": "Average",
+    "Dehydrator": "Premium",
+    "Cost": 248691.6068820877
+  },
+  "x161": {
+    "Q In": 2583.3237574712502,
+    "Q Out": 378.58062180664143,
+    "Fermenter": "World-class",
+    "Filter": "Premium",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 333186.9125020699
+  },
+  "x162": {
+    "Q In": 2583.3237574712502,
+    "Q Out": 378.50002306596434,
+    "Fermenter": "World-class",
+    "Filter": "World-class",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 353262.3813347733
+  },
+  "x165": {
+    "Q In": 2584.0857775106756,
+    "Q Out": 378.89348300012057,
+    "Fermenter": "World-class",
+    "Filter": "Average",
+    "Distiller": "Average",
+    "Dehydrator": "Premium",
+    "Cost": 245564.2220433761
+  },
+  "x166": {
+    "Q In": 2584.0857775106756,
+    "Q Out": 378.2533124846776,
+    "Fermenter": "World-class",
+    "Filter": "Average",
+    "Distiller": "Premium",
+    "Dehydrator": "Premium",
+    "Cost": 255148.3841303259
+  },
+  "x167": {
+    "Q In": 2584.0857775106756,
+    "Q Out": 378.8338520635643,
+    "Fermenter": "World-class",
+    "Filter": "Average",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 332466.2235624078
+  },
+  "x168": {
+    "Q In": 2584.0857775106756,
+    "Q Out": 378.38781581038563,
+    "Fermenter": "World-class",
+    "Filter": "Premium",
+    "Distiller": "Average",
+    "Dehydrator": "Premium",
+    "Cost": 248764.19776809475
+  },
+  "x169": {
+    "Q In": 2584.0857775106756,
+    "Q Out": 378.69229385972443,
+    "Fermenter": "World-class",
+    "Filter": "Premium",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 333284.42749224
+  },
+  "x170": {
+    "Q In": 2584.0857775106756,
+    "Q Out": 378.10079157802613,
+    "Fermenter": "World-class",
+    "Filter": "World-class",
+    "Distiller": "Average",
+    "Dehydrator": "Premium",
+    "Cost": 270103.4593557996
+  },
+  "x171": {
+    "Q In": 2584.0857775106756,
+    "Q Out": 378.6116713444335,
+    "Fermenter": "World-class",
+    "Filter": "World-class",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 353365.8181099511
+  },
+  "x174": {
+    "Q In": 2577.969859903765,
+    "Q Out": 378.1481963420159,
+    "Fermenter": "World-class",
+    "Filter": "Scrap",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 333335.07278743695
+  },
+  "x176": {
+    "Q In": 2585.767139333099,
+    "Q Out": 378.4994260555588,
+    "Fermenter": "World-class",
+    "Filter": "Average",
+    "Distiller": "Premium",
+    "Dehydrator": "Premium",
+    "Cost": 255312.7064784736
+  },
+  "x177": {
+    "Q In": 2585.767139333099,
+    "Q Out": 378.63401689752993,
+    "Fermenter": "World-class",
+    "Filter": "Premium",
+    "Distiller": "Average",
+    "Dehydrator": "Premium",
+    "Cost": 248924.36618638196
+  },
+  "x178": {
+    "Q In": 2585.767139333099,
+    "Q Out": 378.07903742504504,
+    "Fermenter": "World-class",
+    "Filter": "Premium",
+    "Distiller": "Premium",
+    "Dehydrator": "Premium",
+    "Cost": 258252.1392521432
+  },
+  "x179": {
+    "Q In": 2585.767139333099,
+    "Q Out": 378.93869305827576,
+    "Fermenter": "World-class",
+    "Filter": "Premium",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 333499.5897887164
+  },
+  "x180": {
+    "Q In": 2585.767139333099,
+    "Q Out": 378.34680591080325,
+    "Fermenter": "World-class",
+    "Filter": "World-class",
+    "Distiller": "Average",
+    "Dehydrator": "Premium",
+    "Cost": 270277.5123621095
+  },
+  "x181": {
+    "Q In": 2585.767139333099,
+    "Q Out": 378.8580180854038,
+    "Fermenter": "World-class",
+    "Filter": "World-class",
+    "Distiller": "World-class",
+    "Dehydrator": "Average",
+    "Cost": 353594.04654999904
+  }
+}

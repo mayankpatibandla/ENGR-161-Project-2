@@ -1,4 +1,6 @@
 *.out
+output/
+screenshots/
 
 ### Python template
 # Byte-compiled / optimized / DLL files
