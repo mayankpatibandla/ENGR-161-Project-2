@@ -8,10 +8,14 @@ from math import cbrt, pi
 import numpy as np
 
 from process_data import generate_json, load_json
+from calculate_roi import roi_to_csv, create_plot
 
 parser = ArgumentParser()
 parser.add_argument("--json", dest="generate_json", help="Generates a JSON file", action="store_true")
 parser.add_argument("--print", dest="print_data", help="Prints the JSON data", action="store_true")
+parser.add_argument("--generate", dest="generate_configs", help="Generates 1.json and 2.json", action="store_true")
+parser.add_argument("--roi", dest="calculate_roi", help="Calculates the roi", action="store_true")
+parser.add_argument("--plot", dest="create_plot", help="Creates a plot", action="store_true")
 args = parser.parse_args()
 
 
@@ -424,7 +428,7 @@ def q(vol_flow: float, file: str, recurse: bool = False):
                 #                         continue
 
 
-def main(start: int, stop: int, step: int):
+def generate(start: int, stop: int, step: int):
     try:
         os.remove("1.json")
         os.remove("2.json")
@@ -443,5 +447,11 @@ def main(start: int, stop: int, step: int):
     #     dump(x, f, indent=2)
 
 
-if __name__ == '__main__':
-    main(int(8e5), int(1.2e6), 100)
+if args.generate_configs:
+    generate(int(8e5), int(1.2e6), 100)
+
+if args.calculate_roi:
+    roi_to_csv()
+
+if args.create_plot:
+    create_plot()

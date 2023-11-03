@@ -55,29 +55,28 @@ max_filter = filters[max_index]
 max_distiller = distillers[max_index]
 max_dehydrator = dehydrators[max_index]
 
-print(
-    f"Max ratio: {max_val}, Max ROI: {max_roi}, Max Capital: {max_capital}, Max Fermenter: {max_fermenter}, Max Filter: {max_filter}, Max Distiller: {max_distiller}, Max Dehydrator: {max_dehydrator}"
-)
+# print(
+#     f"Max ratio: {max_val}, Max ROI: {max_roi}, Max Capital: {max_capital}, Max Fermenter: {max_fermenter}, Max Filter: {max_filter}, Max Distiller: {max_distiller}, Max Dehydrator: {max_dehydrator}"
+# )
 
-# plt.style.use("dark_background")
-# ax = plt.axes(projection="3d", label="Capital")
+def create_plot():
+    # plt.style.use("dark_background")
+    # ax = plt.axes(projection="3d", label="Capital")
 
-plt.scatter(x_values, y_values)
-plt.scatter(x_values[max_index], y_values[max_index], color="red")
+    plt.scatter(x_values, y_values)
+    plt.scatter(x_values[max_index], y_values[max_index], color="red")
 
-plt.xlabel("kWh per day input")
-plt.ylabel("kWh per day output")
-# plt.zlabel("Capital Cost")
-plt.title("ROI")
+    plt.xlabel("kWh per day input")
+    plt.ylabel("kWh per day output")
+    # plt.zlabel("Capital Cost")
+    plt.title("ROI")
 
-plt.ticklabel_format(style='sci', axis='both', scilimits=(0, 0))
+    plt.ticklabel_format(style='sci', axis='both', scilimits=(0, 0))
 
-# print(matplotlib.style.available)
+    # print(matplotlib.style.available)
 
+    plt.show()
 
-plt.show()
-
-zipped = zip(x_values, y_values)
-with open("roi.csv", "w", encoding="utf-8") as f:
-    wr = csv.writer(f)
-    wr.writerows(zipped)
+def roi_to_csv():
+    with open("roi.csv", "w", encoding="utf-8") as f:
+        csv.writer(f).writerows(zip(x_values, y_values))
