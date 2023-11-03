@@ -46,8 +46,6 @@ roi = []
 for i in range(len(x_values)):
     roi.append(y_values[i] / x_values[i])
 
-print(mass_CO2)
-
 # z = []
 # for i in range(len(roi)):
 #     z.append(roi[i] / capital[i])
