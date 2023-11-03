@@ -65,7 +65,7 @@ max_dehydrator = dehydrators[max_index]
 
 def print_best():
     print(
-        f"Max ROI: {max_roi}, Input: {x_values[max_index]} kWh/day, Output: {y_values[max_index]} kWh/day, Capital: {max_capital}, Best Fermenter: {max_fermenter}, Best Filter: {max_filter}, Best Distiller: {max_distiller}, Best Dehydrator: {max_dehydrator}, Best Pump: Premium, Best Pipe: Glorious, Best Valve: Glorious, Diameter: 0.15m".replace(", ", "\n")
+        f"Max ROI: {max_roi}, Input: {x_values[max_index]} kWh/day, Output: {y_values[max_index]} kWh/day, Capital: {max_capital}, Best Fermenter: {max_fermenter}, Best Filter: {max_filter}, Best Distiller: {max_distiller}, Best Dehydrator: {max_dehydrator}, Best Pump: Premium, Best Pipe: Glorious, Best Valve: Glorious, Diameter: 0.15 m".replace(", ", "\n")
     )
 
 def create_plot():
