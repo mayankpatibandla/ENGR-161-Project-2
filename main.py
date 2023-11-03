@@ -312,7 +312,7 @@ def q(vol_flow: float, file: str, recurse: bool = False):
                         ) / dehydrator_out["total_mass"]
                         dehydrator_out["volumetric_flow"] = dehydrator_out["total_mass"] / dehydrator_out["density"]
 
-                        cost = (fermenter_data["cost"] * fermenter_in["initial_volumetric_flow"] + filter_data["cost"] * filter_in["volumetric_flow"] + distiller_data["cost"] * distiller_in["volumetric_flow"] + dehydrator_data["cost"] * dehydrator_in["volumetric_flow"]) / 24 + pipe_data["cost"] * pipe_total_length + valve_data["cost"] * 8 + (19 * fermenter_in["initial_volumetric_flow"]) + 4 * data["bends"]["90"]["cost"][-1]  # type: ignore
+                        cost = (fermenter_data["cost"] * fermenter_in["initial_volumetric_flow"] + filter_data["cost"] * filter_in["volumetric_flow"] + distiller_data["cost"] * distiller_in["volumetric_flow"] + dehydrator_data["cost"] * dehydrator_in["volumetric_flow"]) / 24 + pipe_data["cost"] * pipe_total_length + valve_data["cost"] * 8 + (19 * fermenter_in["initial_volumetric_flow"]) + 4 * data["bends"]["90"]["cost"][-1] + (456 * fermenter_in["initial_volumetric_flow"] / 24)  # type: ignore
                         dehydrator_out["total_cost"] = cost
 
                         if (
@@ -376,6 +376,7 @@ def q(vol_flow: float, file: str, recurse: bool = False):
                                 "Distiller": distiller_out["distiller_name"],
                                 "Dehydrator": dehydrator_out["dehydrator_name"],
                                 "Cost": dehydrator_out["total_cost"],
+                                "Pump Energy": fermenter_in["mass"] * g * 9 / (3.6e6)
                             },
                             indent=2,
                         )
