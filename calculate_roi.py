@@ -1,4 +1,5 @@
 import json
+import csv
 
 import matplotlib
 from matplotlib import pyplot as plt
@@ -75,3 +76,8 @@ plt.ticklabel_format(style='sci', axis='both', scilimits=(0, 0))
 
 
 plt.show()
+
+zipped = zip(x_values, y_values)
+with open("roi.csv", "w", encoding="utf-8") as f:
+    wr = csv.writer(f)
+    wr.writerows(zipped)
