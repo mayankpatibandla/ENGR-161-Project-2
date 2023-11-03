@@ -1,7 +1,6 @@
 import json
 import csv
 
-import matplotlib
 from matplotlib import pyplot as plt
 
 with open("2.json", encoding="utf-8") as f:
