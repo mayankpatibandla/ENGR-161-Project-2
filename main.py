@@ -14,7 +14,7 @@ JSON_FILE = "equipment.json"
 def generate_json() -> None:
     data = {}
     for file in ["fermenters", "distillers", "filters"]:
-        with open(f"data/{file}.csv", encoding='utf-8', newline='') as f:
+        with open(f"{file}.csv", encoding='utf-8', newline='') as f:
             x = list(DictReader(f))
             power = x[0]
             efficiency = x[1]
@@ -29,7 +29,7 @@ def generate_json() -> None:
                 }
             data[file] = result
     for file in ["pumps", "pipes", "ductworks", "bends", "valves"]:
-        with open(f"data/{file}.csv", encoding='utf-8', newline='') as f:
+        with open(f"{file}.csv", encoding='utf-8', newline='') as f:
             x = list(DictReader(f))
             coefficient = x[0]
             costs = x[1:]
