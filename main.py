@@ -1,11 +1,58 @@
-import os
+from os import remove
 import sys
 from argparse import ArgumentParser
-from json import dumps
+from json import dumps, dump, load
 from math import cbrt, pi
 
-from process_data import generate_json, load_json
-from calculate_roi import roi_to_csv, create_plot, print_best
+from matplotlib import pyplot as plt
+
+from csv import DictReader, writer
+
+JSON_FILE = "equipment.json"
+
+
+def generate_json() -> None:
+    data = {}
+    for file in ["fermenters", "distillers", "filters"]:
+        with open(f"data/{file}.csv", encoding='utf-8', newline='') as f:
+            x = list(DictReader(f))
+            power = x[0]
+            efficiency = x[1]
+            cost = x[2]
+
+            result = {}
+            for key in x[0].keys():
+                result[key] = {
+                    "power": float(power[key]),
+                    "efficiency": float(efficiency[key]),
+                    "cost": float(cost[key]),
+                }
+            data[file] = result
+    for file in ["pumps", "pipes", "ductworks", "bends", "valves"]:
+        with open(f"data/{file}.csv", encoding='utf-8', newline='') as f:
+            x = list(DictReader(f))
+            coefficient = x[0]
+            costs = x[1:]
+
+            result = {}
+            for key in x[0].keys():
+                result[key] = {}
+                if key.find("(m)") != -1:
+                    result[key] = [float(cost[key]) for cost in costs]
+                    continue
+                if coefficient[key] != '':
+                    result[key]["coefficient"] = float(coefficient[key])
+                result[key]["cost"] = [float(cost[key]) for cost in costs]
+            data[file] = result
+
+    with open(JSON_FILE, "w", encoding='utf-8') as f:
+        dump(data, f, indent=2)
+
+
+def load_json() -> dict[str, dict[str, dict[str, list[float] | float]]]:
+    with open(JSON_FILE, "r", encoding='utf-8') as f:
+        return load(f)
+
 
 parser = ArgumentParser()
 parser.add_argument("--json", dest="generate_json", help="Generates a JSON file", action="store_true")
@@ -327,7 +374,7 @@ def q(vol_flow: float, file: str, recurse: bool = False):
 
 def delete_file(file: str):
     try:
-        os.remove(file)
+        remove(file)
     except FileNotFoundError:
         pass
 
@@ -337,6 +384,95 @@ def generate():
     delete_file("2.json")
 
     q(1, "1.json", True)
+
+x_values = []
+y_values = []
+capital = []
+fermenters = []
+filters = []
+distillers = []
+dehydrators = []
+
+mass_CO2 = 0
+max_roi = 0
+max_capital = 0
+max_index = 0
+max_fermenter = 0
+max_filter = 0
+max_distiller = 0
+max_dehydrator = 0
+
+def init_roi():
+    global mass_CO2, max_roi, max_capital, max_fermenter, max_filter, max_distiller, max_dehydrator, max_index
+
+    
+
+    with open("2.json", encoding="utf-8") as f:
+        roi_data = load(f)
+
+    kWh_per_cubic_meter_ethanol = 5877.83
+
+    mass_CO2 = 0
+
+    with open("equipment.json", encoding="utf-8") as f:
+        equipment = load(f)
+        for value in roi_data.values():
+            energy_output = kWh_per_cubic_meter_ethanol * value["Q Out"]
+
+            total_kWh_per_day_input = (
+                equipment["fermenters"][value["Fermenter"]]["power"]
+                + equipment["filters"][value["Filter"]]["power"]
+                + equipment["distillers"][value["Distiller"]]["power"]
+                + equipment["filters"][value["Dehydrator"]]["power"]
+                + value["Pump Energy"]
+            )
+
+            x_values.append(total_kWh_per_day_input)
+            y_values.append(energy_output)
+            capital.append(value["Cost"])
+            fermenters.append(value["Fermenter"])
+            filters.append(value["Filter"])
+            distillers.append(value["Distiller"])
+            dehydrators.append(value["Dehydrator"])
+
+            mass_CO2 = value["Mass CO2"]
+
+    roi = []
+    for i in range(len(x_values)):
+        roi.append(y_values[i] / x_values[i])
+
+    max_val = max(roi)
+    max_index = roi.index(max_val)
+    max_roi = roi[max_index]
+    max_capital = capital[max_index]
+    max_fermenter = fermenters[max_index]
+    max_filter = filters[max_index]
+    max_distiller = distillers[max_index]
+    max_dehydrator = dehydrators[max_index]
+
+init_roi()
+
+def print_best():
+    print(
+        f"Max ROI: {max_roi}, Input: {x_values[max_index]} kWh/day, Output: {y_values[max_index]} kWh/day, Capital: {max_capital}, Best Fermenter: {max_fermenter}, Best Filter: {max_filter}, Best Distiller: {max_distiller}, Best Dehydrator: {max_dehydrator}, Best Pump: Premium, Best Pipe: Glorious, Best Valve: Glorious, Diameter: 0.15 m".replace(", ", "\n")
+    )
+
+def create_plot():
+    plt.scatter(x_values, y_values)
+    plt.scatter(x_values[max_index], y_values[max_index], color="red")
+
+    plt.xlabel("kWh per day input")
+    plt.ylabel("kWh per day output")
+    plt.title("ROI")
+
+    plt.ticklabel_format(style='sci', axis='both', scilimits=(0, 0))
+
+    plt.show()
+
+def roi_to_csv():
+    with open("roi.csv", "w", encoding="utf-8") as f:
+        writer(f).writerows(zip(x_values, y_values))
+
 
 if args.generate_json:
     generate_json()
