@@ -780,8 +780,8 @@ def print_best():
     print(dedent(
         f"""
         Max ROI: {max_roi:.2f}
-        Q In: {q_in[max_index]:.2f} m^3/day
-        Q Out: {q_out[max_index]:.2f} m^3/day
+        Q In: {264.172052 * q_in[max_index]:.2f} gal/day
+        Q Out: {264.172052 * q_out[max_index]:.2f} gal/day
         Input: {x_values[max_index]:.2f} kWh/day
         Output: {y_values[max_index]:.2f} kWh/day
         Capital: {max_capital:.2f} dollars
