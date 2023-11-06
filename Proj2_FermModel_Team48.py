@@ -434,16 +434,18 @@ def q(vol_flow: float, file: str, recurse: bool = False) -> None:
                     )
 
                     pipe_energy_loss_4 = (
-                        distiller_out["total_mass"]
-                        * g
-                        * (
-                            pipe_data["coefficient"]
-                            * 8
-                            * (distiller_out["volumetric_flow"] / 86400) ** 2
-                            * pipe_length_section_4
-                            / (pi ** 2 * g * ((pipe_diameter / 2) * 2) ** 5)
-                        )
-                    ) / (3.6e6)
+                        (
+                            distiller_out["total_mass"]
+                            * g
+                            * (
+                                pipe_data["coefficient"]
+                                * 8
+                                * (distiller_out["volumetric_flow"] / 86400) ** 2
+                                * pipe_length_section_4
+                                / (pi ** 2 * g * ((pipe_diameter / 2) * 2) ** 5)
+                            )
+                        ) / (3.6e6)
+                    )
 
                     valve_energy_loss_4 = (
                         2
@@ -505,8 +507,7 @@ def q(vol_flow: float, file: str, recurse: bool = False) -> None:
                     distiller_out["density"] = (
                         fermenter_in["density_sugar"] * distiller_out["mass_sugar"]
                         + fermenter_in["density_water"] * distiller_out["mass_water"]
-                        + fermenter_in["density_ethanol"]
-                        * distiller_out["mass_ethanol"]
+                        + fermenter_in["density_ethanol"] * distiller_out["mass_ethanol"]
                         + fermenter_in["density_fiber"] * distiller_out["mass_fiber"]
                     ) / distiller_out["total_mass"]
                     distiller_out["volumetric_flow"] = (
@@ -543,23 +544,66 @@ def q(vol_flow: float, file: str, recurse: bool = False) -> None:
                             dehydrator_out["total_mass"] / dehydrator_out["density"]
                         )
 
-                        pipe_energy_loss_5 = ((dehydrator_out["total_mass"] * g * (pipe_data["coefficient"] * 8 * (dehydrator_out["volumetric_flow"] / 86400) ** 2 * pipe_length_section_5 / (pi ** 2 * g * ((pipe_diameter / 2) * 2) ** 5))) / (3.6e6))
+                        pipe_energy_loss_5 = (
+                            (
+                                dehydrator_out["total_mass"] * g * (
+                                    pipe_data["coefficient"] * 8 * (
+                                        dehydrator_out["volumetric_flow"] / 86400
+                                    ) ** 2 * pipe_length_section_5 / (
+                                        pi ** 2 * g * ((pipe_diameter / 2) * 2) ** 5
+                                    )
+                                )
+                            ) / (3.6e6)
+                        )
 
-                        valve_energy_loss_5 = ((dehydrator_out["total_mass"] * g * valve_data["coefficient"] * ((dehydrator_out["volumetric_flow"] / 86400) / (pi * (pipe_diameter / 2) ** 2)) ** 2 / (2 * g)) / (3.6e6))
+                        valve_energy_loss_5 = (
+                            (
+                                dehydrator_out["total_mass"] * g * valve_data["coefficient"] *
+                                (
+                                    (dehydrator_out["volumetric_flow"] / 86400) /
+                                    (pi * (pipe_diameter / 2) ** 2)
+                                ) ** 2 / (2 * g)
+                            ) / (3.6e6)
+                        )
 
                         total_energy_loss_5 = pipe_energy_loss_5 + valve_energy_loss_5
 
-                        dehydrator_out["mass_sugar"] -= (cbrt(fermenter_in["density_sugar"] ** 2 * ((pipe_diameter / 2) * 2) ** 4 * total_energy_loss_5) / 2)
-                        dehydrator_out["mass_water"] -= (cbrt(fermenter_in["density_water"] ** 2 * ((pipe_diameter / 2) * 2) ** 4 * total_energy_loss_5) / 2)
-                        dehydrator_out["mass_fiber"] -= (cbrt(fermenter_in["density_fiber"] ** 2 * ((pipe_diameter / 2) * 2) ** 4 * total_energy_loss_5) / 2)
-                        dehydrator_out["mass_ethanol"] -= (cbrt(fermenter_in["density_ethanol"] ** 2 * ((pipe_diameter / 2) * 2) ** 4 * total_energy_loss_5) / 2)
-
+                        dehydrator_out["mass_sugar"] -= (
+                            cbrt(
+                                fermenter_in["density_sugar"] ** 2
+                                * ((pipe_diameter / 2) * 2) ** 4
+                                * total_energy_loss_5
+                            )
+                            / 2
+                        )
+                        dehydrator_out["mass_water"] -= (
+                            cbrt(
+                                fermenter_in["density_water"] ** 2
+                                * ((pipe_diameter / 2) * 2) ** 4
+                                * total_energy_loss_5
+                            ) / 2
+                        )
+                        dehydrator_out["mass_fiber"] -= (
+                            cbrt(
+                                fermenter_in["density_fiber"] ** 2
+                                * ((pipe_diameter / 2) * 2) ** 4
+                                * total_energy_loss_5
+                            ) / 2
+                        )
+                        dehydrator_out["mass_ethanol"] -= (
+                            cbrt(
+                                fermenter_in["density_ethanol"] ** 2
+                                * ((pipe_diameter / 2) * 2) ** 4
+                                * total_energy_loss_5
+                            ) / 2
+                        )
                         dehydrator_out["total_mass"] = (
                             dehydrator_out["mass_water"]
                             + dehydrator_out["mass_fiber"]
                             + dehydrator_out["mass_sugar"]
                             + dehydrator_out["mass_ethanol"]
                         )
+
                         dehydrator_out["density"] = (
                             fermenter_in["density_sugar"] * dehydrator_out["mass_sugar"]
                             + fermenter_in["density_water"]
@@ -573,7 +617,19 @@ def q(vol_flow: float, file: str, recurse: bool = False) -> None:
                             dehydrator_out["total_mass"] / dehydrator_out["density"]
                         )
 
-                        cost = (fermenter_data["cost"] * fermenter_in["initial_volumetric_flow"] + filter_data["cost"] * filter_in["volumetric_flow"] + distiller_data["cost"] * distiller_in["volumetric_flow"] + dehydrator_data["cost"] * dehydrator_in["volumetric_flow"]) / 24 + pipe_data["cost"] * pipe_total_length + valve_data["cost"] * 8 + (19 * fermenter_in["initial_volumetric_flow"]) + 4 * data["bends"]["90"]["cost"][-1] + (456 * fermenter_in["initial_volumetric_flow"] / 24)  # type: ignore
+                        cost = (
+                            fermenter_data["cost"] * fermenter_in["initial_volumetric_flow"] +
+                            filter_data["cost"] * filter_in["volumetric_flow"] +
+                            distiller_data["cost"] * distiller_in["volumetric_flow"] +
+                            dehydrator_data["cost"] * dehydrator_in["volumetric_flow"]
+                        ) / 24
+
+                        cost += pipe_data["cost"] * pipe_total_length
+                        cost += valve_data["cost"] * 8
+                        cost += 19 * fermenter_in["initial_volumetric_flow"]
+                        cost += 4 * data["bends"]["90"]["cost"][-1]  # type: ignore
+                        cost += 456 * fermenter_in["initial_volumetric_flow"] / 24
+
                         dehydrator_out["total_cost"] = cost
 
                         if (
