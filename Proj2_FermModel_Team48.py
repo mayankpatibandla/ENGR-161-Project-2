@@ -597,7 +597,7 @@ init_roi()
 
 def print_best():
     print(
-        f"Max ROI: {max_roi}, Q In: {q_in[max_index]}, Q Out: {q_out[max_index]}, Input: {x_values[max_index]} kWh/day, Output: {y_values[max_index]} kWh/day, Capital: {max_capital}, Best Fermenter: {max_fermenter}, Best Filter: {max_filter}, Best Distiller: {max_distiller}, Best Dehydrator: {max_dehydrator}, Best Pump: Premium, Best Pipe: Glorious, Best Valve: Glorious, Diameter: 0.15 m".replace(
+        f"Max ROI: {max_roi:.2f}, Q In: {q_in[max_index]:.2f}, Q Out: {q_out[max_index]:.2f}, Input: {x_values[max_index]:.2f} kWh/day, Output: {y_values[max_index]:.2f} kWh/day, Capital: {max_capital:.2f}, Best Fermenter: {max_fermenter}, Best Filter: {max_filter}, Best Distiller: {max_distiller}, Best Dehydrator: {max_dehydrator}, Best Pump: Premium, Best Pipe: Glorious, Best Valve: Glorious, Diameter: 0.15 m".replace(
             ", ", "\n"
         )
     )
