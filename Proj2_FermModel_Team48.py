@@ -132,6 +132,8 @@ data = load_json()
 
 # Constants
 
+MINIMUM_GRADE = 0.98
+
 g = 9.80665
 
 PIPE_LENGTH_SECTION_1 = 7.67
@@ -738,7 +740,7 @@ def optimal(vol_flow: float, file: str, recurse: bool = False) -> None:
                             dehydrator_out["mass_ethanol"]
                             / dehydrator_out["total_mass"]
                         )
-                        if float(grade) < 0.98:
+                        if float(grade) < MINIMUM_GRADE:
                             continue
 
                         if not recurse:
