@@ -679,8 +679,9 @@ def q(vol_flow: float, file: str, recurse: bool = False) -> None:
                             },
                             indent=2,
                         )
+                        json_str = json_str.split('\n')[0] + "\n" + '\n'.join('  ' + line for line in json_str.split('\n')[1:])
                         global name
-                        f.write(f'"x{name}": ' + json_str)
+                        f.write(f'  "x{name}": ' + json_str)
                         name += 1
                         f.write(",\n")
 
@@ -700,11 +701,33 @@ def delete_file(file: str) -> None:
         pass
 
 
+def remove_trailing_comma_and_add_bracket(filename):
+    with open(filename, "r", encoding="utf-8") as f:
+        lines = f.readlines()
+
+    for i in range(len(lines) - 1, -1, -1):
+        if lines[i].strip():
+            lines[i] = lines[i].rstrip(',\n') + '\n'
+            break
+
+    with open(filename, "w", encoding="utf-8") as f:
+        f.writelines(lines)
+        f.write("}\n")
+
+
 def generate() -> None:
     delete_file("1.json")
     delete_file("2.json")
 
+    with open("1.json", "w+", encoding="utf-8") as f:
+        f.write("{\n")
+    with open("2.json", "w+", encoding="utf-8") as f:
+        f.write("{\n")
+
     q(1, "1.json", True)
+
+    remove_trailing_comma_and_add_bracket("1.json")
+    remove_trailing_comma_and_add_bracket("2.json")
 
 
 x_values = []
