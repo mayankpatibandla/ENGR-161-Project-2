@@ -415,10 +415,9 @@ def q(vol_flow: float, file: str, recurse: bool = False) -> None:
                         dehydrator_out = dehydrator_in.copy()
 
                         dehydrator_out["dehydrator_name"] = dehydrator_name
-                        dehydrator_out["mass_water"] = (
-                            dehydrator_in["mass_water"] *
-                            (1 - dehydrator_data["efficiency"])  # type: ignore
-                        )
+                        dehydrator_out["mass_water"] = dehydrator_in["mass_water"] * (
+                            1 - dehydrator_data["efficiency"]
+                        )  # type: ignore
                         dehydrator_out["mass_water_waste_dehydrator"] = (
                             dehydrator_in["mass_water"] * dehydrator_data["efficiency"]
                         )
