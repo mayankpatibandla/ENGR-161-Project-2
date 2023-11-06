@@ -722,7 +722,7 @@ def create_plot():
 
 
 def roi_to_csv():
-    with open("roi.csv", "w", encoding="utf-8") as f:
+    with open("roi.csv", "w", encoding="utf-8", newline="") as f:
         writer(f).writerows(zip(x_values, y_values))
 
 
