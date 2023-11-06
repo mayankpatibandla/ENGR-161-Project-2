@@ -65,7 +65,7 @@ JSON_FILE = "equipment.json"
 
 
 def generate_json() -> None:
-    data = {}
+    equipment_data = {}
     for file in ["fermenters", "distillers", "filters"]:
         with open(f"{file}.csv", encoding="utf-8", newline="") as f:
             x = list(DictReader(f))
@@ -80,7 +80,7 @@ def generate_json() -> None:
                     "efficiency": float(efficiency[key]),
                     "cost": float(cost[key]),
                 }
-            data[file] = result
+            equipment_data[file] = result
     for file in ["pumps", "pipes", "ductworks", "bends", "valves"]:
         with open(f"{file}.csv", encoding="utf-8", newline="") as f:
             x = list(DictReader(f))
@@ -96,10 +96,10 @@ def generate_json() -> None:
                 if coefficient[key] != "":
                     result[key]["coefficient"] = float(coefficient[key])
                 result[key]["cost"] = [float(cost[key]) for cost in costs]
-            data[file] = result
+            equipment_data[file] = result
 
     with open(JSON_FILE, "w", encoding="utf-8") as f:
-        dump(data, f, indent=2)
+        dump(equipment_data, f, indent=2)
 
 
 def load_json() -> dict[str, dict[str, dict[str, list[float] | float]]]:
