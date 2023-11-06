@@ -53,7 +53,7 @@ parser.add_argument(
 parser.add_argument(
     "--generate",
     dest="generate_configs",
-    help="Generates 1.json and 2.json",
+    help="Generates 1.json and flow.json",
     action="store_true",
 )
 parser.add_argument(
@@ -784,7 +784,7 @@ def optimal(vol_flow: float, file: str, recurse: bool = False) -> None:
                         if recurse:
                             optimal(
                                 378.54118 / dehydrator_out["volumetric_flow"],
-                                "2.json",
+                                "flow.json",
                                 False,
                             )
 
@@ -817,13 +817,13 @@ def generate() -> None:
     """
     with open("1.json", "w+", encoding="utf-8") as f:
         f.write("{\n")
-    with open("2.json", "w+", encoding="utf-8") as f:
+    with open("flow.json", "w+", encoding="utf-8") as f:
         f.write("{\n")
 
     optimal(1, "1.json", True)
 
     fix_end_of_json("1.json")
-    fix_end_of_json("2.json")
+    fix_end_of_json("flow.json")
 
 
 x_values = []
@@ -852,7 +852,7 @@ def init_roi() -> None:
     global max_roi, max_capital, max_fermenter, max_filter
     global max_distiller, max_dehydrator, max_index
 
-    with open("2.json", encoding="utf-8") as f:
+    with open("flow.json", encoding="utf-8") as f:
         roi_data = load(f)
 
     kWh_per_cubic_meter_ethanol = 5877.83
