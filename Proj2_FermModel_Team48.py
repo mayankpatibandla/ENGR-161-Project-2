@@ -568,7 +568,7 @@ def init_roi():
 
             x_values.append(total_kWh_per_day_input)
             y_values.append(energy_output)
-            capital.append(value["Cost"])
+            capital.append(value["Cost"] + 1.4e6)
             fermenters.append(value["Fermenter"])
             filters.append(value["Filter"])
             distillers.append(value["Distiller"])
