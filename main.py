@@ -8,6 +8,14 @@ from matplotlib import pyplot as plt
 
 from csv import DictReader, writer
 
+parser = ArgumentParser()
+parser.add_argument("--json", dest="generate_json", help="Generates a JSON file", action="store_true")
+parser.add_argument("--print", dest="print_data", help="Prints the JSON data", action="store_true")
+parser.add_argument("--generate", dest="generate_configs", help="Generates 1.json and 2.json", action="store_true")
+parser.add_argument("--roi", dest="calculate_roi", help="Calculates the roi", action="store_true")
+parser.add_argument("--plot", dest="create_plot", help="Creates a plot", action="store_true")
+args = parser.parse_args()
+
 JSON_FILE = "equipment.json"
 
 
@@ -53,15 +61,6 @@ def load_json() -> dict[str, dict[str, dict[str, list[float] | float]]]:
     with open(JSON_FILE, "r", encoding='utf-8') as f:
         return load(f)
 
-
-parser = ArgumentParser()
-parser.add_argument("--json", dest="generate_json", help="Generates a JSON file", action="store_true")
-parser.add_argument("--print", dest="print_data", help="Prints the JSON data", action="store_true")
-parser.add_argument("--generate", dest="generate_configs", help="Generates 1.json and 2.json", action="store_true")
-parser.add_argument("--roi", dest="calculate_roi", help="Calculates the roi", action="store_true")
-parser.add_argument("--plot", dest="create_plot", help="Creates a plot", action="store_true")
-args = parser.parse_args()
-
 data = load_json()
 
 g = 9.80665
@@ -84,7 +83,7 @@ num_bends_section_2 = 2
 name = 0
 
 
-def q(vol_flow: float, file: str, recurse: bool = False):
+def q(vol_flow: float, file: str, recurse: bool = False) -> None:
     with open(f"{file}", "a+", encoding='utf-8') as f:
         fermenter_in = {
             "initial_volumetric_flow": vol_flow,
@@ -372,14 +371,14 @@ def q(vol_flow: float, file: str, recurse: bool = False):
                         if recurse:
                             q(378.54118 / dehydrator_out["volumetric_flow"], "2.json", False)
 
-def delete_file(file: str):
+def delete_file(file: str) -> None:
     try:
         remove(file)
     except FileNotFoundError:
         pass
 
 
-def generate():
+def generate() -> None:
     delete_file("1.json")
     delete_file("2.json")
 
