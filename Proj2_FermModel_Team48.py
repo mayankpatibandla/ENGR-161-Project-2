@@ -571,7 +571,6 @@ def q(vol_flow: float, file: str, recurse: bool = False) -> None:
                         name += 1
                         f.write(",\n")
 
-                        global jobs
                         if recurse:
                             q(
                                 378.54118 / dehydrator_out["volumetric_flow"],
@@ -672,8 +671,8 @@ def init_roi():
             mass_CO2 = value["Mass CO2"]
 
     roi = []
-    for i in range(len(x_values)):
-        roi.append(y_values[i] / x_values[i])
+    for i, x in enumerate(x_values):
+        roi.append(y_values[i] / x)
 
     max_val = max(roi)
     max_index = roi.index(max_val)
