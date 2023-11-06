@@ -169,7 +169,7 @@ def q(vol_flow: float, file: str, recurse: bool = False) -> None:
                 num_bends_section_2
                 * fermenter_out["total_mass"]
                 * 0.3
-                * (fermenter_out["volumetric_flow"] / 86400 / (pi * ((pipe_diameter / 2) ** 2))) ** 2  # type: ignore
+                * (fermenter_out["volumetric_flow"] / 86400 / (pi * ((pipe_diameter / 2) ** 2))) ** 2
                 / (2 * g)
             ) / (3.6e6)
 
@@ -415,9 +415,10 @@ def q(vol_flow: float, file: str, recurse: bool = False) -> None:
                         dehydrator_out = dehydrator_in.copy()
 
                         dehydrator_out["dehydrator_name"] = dehydrator_name
-                        dehydrator_out["mass_water"] = dehydrator_in["mass_water"] * (
-                            1 - dehydrator_data["efficiency"]
-                        )  # type: ignore
+                        dehydrator_out["mass_water"] = (
+                            dehydrator_in["mass_water"] *
+                            (1 - dehydrator_data["efficiency"])  # type: ignore
+                        )
                         dehydrator_out["mass_water_waste_dehydrator"] = (
                             dehydrator_in["mass_water"] * dehydrator_data["efficiency"]
                         )
@@ -543,10 +544,10 @@ def q(vol_flow: float, file: str, recurse: bool = False) -> None:
                             continue
 
                         if not recurse:
-                            if dehydrator_out["volumetric_flow"] < 378:  # type: ignore
+                            if dehydrator_out["volumetric_flow"] < 378:
                                 continue
 
-                            if dehydrator_out["volumetric_flow"] > 379:  # type: ignore
+                            if dehydrator_out["volumetric_flow"] > 379:
                                 continue
 
                         json_str = dumps(
