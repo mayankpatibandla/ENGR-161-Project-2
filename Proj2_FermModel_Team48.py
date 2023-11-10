@@ -132,7 +132,7 @@ data = load_json()
 
 # Constants
 
-MINIMUM_GRADE = 0.98
+MINIMUM_GRADE = 0
 
 g = 9.80665
 
@@ -179,9 +179,9 @@ def optimal(vol_flow: float, file: str, recurse: bool = False) -> None:
         }
         fermenter_in["mass"] = fermenter_in["initial_volumetric_flow"] * 1182
 
-        pipe_diameter = 0.15
-        pipe_data = {"coefficient": 0.002, "cost": 73}
-        valve_data = {"coefficient": 500.0, "cost": 76}
+        pipe_diameter = 0.1
+        pipe_data = {"coefficient": 0.05, "cost": 1.00}
+        valve_data = {"coefficient": 800.0, "cost": 1.00}
 
         # Fermenter calculations
         for fermenter_name, fermenter_data in data["fermenters"].items():
@@ -731,7 +731,7 @@ def optimal(vol_flow: float, file: str, recurse: bool = False) -> None:
                             4 * data["bends"]["90"]["cost"][-1]  # type: ignore
                         )
                         cost += (
-                            456 * fermenter_in["initial_volumetric_flow"] / 24
+                            260 * fermenter_in["initial_volumetric_flow"] / 24
                         )
 
                         dehydrator_out["total_cost"] = cost
