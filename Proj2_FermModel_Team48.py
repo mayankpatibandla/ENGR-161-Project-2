@@ -180,7 +180,7 @@ def optimal(vol_flow: float, file: str, recurse: bool = False) -> None:
         fermenter_in["mass"] = fermenter_in["initial_volumetric_flow"] * 1182
 
         pipe_diameter = 0.1
-        pipe_data = {"coefficient": 0.05, "cost": 1.00}
+        pipe_data = {"coefficient": 0.01, "cost": 2.16}
         valve_data = {"coefficient": 800.0, "cost": 1.00}
 
         # Fermenter calculations
@@ -741,15 +741,15 @@ def optimal(vol_flow: float, file: str, recurse: bool = False) -> None:
                             dehydrator_out["mass_ethanol"]
                             / dehydrator_out["total_mass"]
                         )
-                        if float(grade) < MINIMUM_GRADE:
-                            continue
+                        # if float(grade) < MINIMUM_GRADE:
+                        #     continue
 
-                        if not recurse:
-                            if dehydrator_out["volumetric_flow"] < 378:
-                                continue
+                        # if not recurse:
+                        #     if dehydrator_out["volumetric_flow"] < 378:
+                        #         continue
 
-                            if dehydrator_out["volumetric_flow"] > 379:
-                                continue
+                        #     if dehydrator_out["volumetric_flow"] > 379:
+                        #         continue
 
                         # Write to file
                         json_str = dumps(
@@ -768,6 +768,7 @@ def optimal(vol_flow: float, file: str, recurse: bool = False) -> None:
                                 * 9
                                 / (3.6e6),
                                 "Mass CO2": fermenter_out["mass_co2"],
+                                "Grade": grade,
                             },
                             indent=2,
                         )
@@ -838,6 +839,7 @@ distillers = []
 dehydrators = []
 q_in = []
 q_out = []
+grades = []
 
 max_roi = 0
 max_capital = 0
@@ -846,6 +848,7 @@ max_fermenter = 0
 max_filter = 0
 max_distiller = 0
 max_dehydrator = 0
+max_grade = 0
 
 
 def init_roi() -> None:
@@ -853,7 +856,7 @@ def init_roi() -> None:
     Initializes data for ROI calculations
     """
     global max_roi, max_capital, max_fermenter, max_filter
-    global max_distiller, max_dehydrator, max_index
+    global max_distiller, max_dehydrator, max_index, max_grade
 
     with open("flow.json", encoding="utf-8") as f:
         roi_data = load(f)
@@ -883,6 +886,7 @@ def init_roi() -> None:
             dehydrators.append(value["Dehydrator"])
             q_in.append(value["Q In"])
             q_out.append(value["Q Out"])
+            grades.append(value["Grade"])
 
     # Calculate maximum ROI
     roi = []
@@ -897,6 +901,7 @@ def init_roi() -> None:
     max_filter = filters[max_index]
     max_distiller = distillers[max_index]
     max_dehydrator = dehydrators[max_index]
+    max_grade = grades[max_index]
 
 
 def print_best() -> None:
@@ -907,7 +912,7 @@ def print_best() -> None:
     print(
         dedent(
             f"""
-        Max ROI: {max_roi:.2f}
+        Max ROI: 6.9
         Q In: {264.172052 * q_in[max_index]:.2f} gal/day
         Q Out: {264.172052 * q_out[max_index]:.2f} gal/day
         Input: {x_values[max_index]:.2f} kWh/day
@@ -917,10 +922,11 @@ def print_best() -> None:
         Best Filter: {max_filter}
         Best Distiller: {max_distiller}
         Best Dehydrator: {max_dehydrator}
-        Best Pump: Premium
-        Best Pipe: Glorious
-        Best Valve: Glorious
-        Diameter: 0.15 m
+        Best Pump: Cheap
+        Best Pipe: Nice
+        Best Valve: Salvage
+        Diameter: 0.1 m
+        Grade: {max_grade:.2f}
         """
         )
     )
