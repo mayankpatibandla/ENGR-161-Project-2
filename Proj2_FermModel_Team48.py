@@ -716,7 +716,8 @@ def optimal(vol_flow: float, file: str, recurse: bool = False) -> None:
                         cost = (
                             fermenter_data["cost"]
                             * fermenter_in["initial_volumetric_flow"]
-                            + filter_data["cost"] * filter_in["volumetric_flow"]
+                            + filter_data["cost"]
+                            * filter_in["volumetric_flow"]
                             + distiller_data["cost"]
                             * distiller_in["volumetric_flow"]
                             + dehydrator_data["cost"]
